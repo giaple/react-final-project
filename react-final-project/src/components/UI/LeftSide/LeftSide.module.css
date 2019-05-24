@@ -1,0 +1,101 @@
+.LeftSide {
+    width: 25%;
+    max-width: 30%;
+    padding: 20px;
+    background-color: #111;
+    flex-direction: column;
+    position: relative;
+    z-index: 99;
+    border-radius: 5%;
+    margin-top: 5%;
+}
+
+.item>.icon {
+    height: 28px;
+    width: 28px;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin-right: 15px;
+}
+
+.item {
+	height: 30px;
+	border: none;
+    text-transform: capitalize;
+    padding: 5px 10px 5px 36px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    margin-top: 15px;
+}
+
+
+.item>.icon.console {
+    background-image: url('../../../assets/img_ui/icon_console.svg');
+}
+
+.item>.icon.keyboard {
+    background-image: url('../../../assets/img_ui/icon_keyboard.svg');
+}
+
+.item>.icon.launch {
+    background-image: url('../../../assets/img_ui/icon_launch.svg');
+}
+
+.item>.icon.loop {
+    background-image: url('../../../assets/img_ui/icon_loop.svg');
+}
+
+.item>.icon.macro {
+    background-image: url('../../../assets/img_ui/icon_macro.svg');
+}
+
+.item>.icon.mouse {
+    background-image: url('../../../assets/img_ui/icon_mouse.svg');
+}
+
+.item>.icon.multimedia {
+    background-image: url('../../../assets/img_ui/icon_multimedia.svg');
+}
+
+.item>.icon.switch {
+    background-image: url('../../../assets/img_ui/icon_switch.svg');
+}
+
+.item>.icon.switch_light {
+    background-image: url('../../../assets/img_ui/icon_switch_light.svg');
+}
+
+.item>.icon.text_function {
+    background-image: url('../../../assets/img_ui/icon_text_function.svg');
+}
+
+.item>.icon.delay {
+    background-image: url('../../../assets/img_ui/icon_time.svg');
+    
+}
+
+.item:hover {
+	cursor: pointer;
+	background-color: rgba(255,255,255,0.1);
+}
+.item:active {
+	color: #44d62c;
+	background-color: rgba(255,255,255,0.1);
+}
+
+.item::before {
+    content: " ";
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: absolute;
+    left: 10px;
+}
+	

@@ -2,11 +2,10 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    background-color: #666;
+html, body {
+    background-color: #383737;
     /*background-color: #fff;*/
-    color: #ccc;
+    color: rgb(231, 231, 231);
     min-width: 1024px;
     min-height: 730px;
     width: 100%;
@@ -25,7 +24,22 @@ div {
     /* Opera/IE 8+ */
 }
 
-.App {}
+.App {
+    max-width: 1920px;
+    min-height: 652px;
+    position: fixed;
+    width: 100%;
+    min-width: 1024px;
+    top: 48px;
+    bottom: 30px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 div.flex {
     display: flex;
@@ -34,13 +48,15 @@ div.flex {
 ::-webkit-scrollbar-corner {
     background-color: #222;
 }
+
 ::-webkit-scrollbar-track {
     background-color: #222;
     height: 8px;
     width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     width: 6px;
     height: 6px;
@@ -50,8 +66,9 @@ div.flex {
     /*border-bottom: 2px solid rgba(0,0,0,0);*/
     background-clip: padding-box;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #44d62c; 
+    background: #44d62c;
     border: 1px solid rgba(0, 0, 0, 0);
     /*border-radius: 4px;*/
     /*width: 6px;*/
@@ -61,8 +78,9 @@ div.flex {
     background-clip: padding-box;
     /*background-clip: padding-box;*/
 }
+
 ::-webkit-scrollbar-thumb:active {
-    background: #2F941E; 
+    background: #2F941E;
     border: 1px solid rgba(0, 0, 0, 0);
     /*border-radius: 4px;*/
     /*width: 6px;*/

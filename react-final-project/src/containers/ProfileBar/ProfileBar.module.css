@@ -1,0 +1,27 @@
+.ProfileBar {
+    width: 95%;
+    height: 26px;
+    margin: 0 auto 10px auto;
+    font-size: 14px;
+    /*line-height: 26px;*/
+    text-transform: uppercase;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex.ProfileBar>div {
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.divider {
+    width: 1px;
+    height: 26px;
+    background: #5d5d5d;
+}
+
+.button {
+    text-decoration: underline;
+    margin-left: 10px;
+}

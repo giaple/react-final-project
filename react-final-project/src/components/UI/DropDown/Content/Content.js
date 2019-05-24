@@ -5,7 +5,7 @@ import classes from './Content.module.css';
 const Content = (props) => {
 
     return (
-        <div className={classes.Contents +" " + classes.expand + " flex"}>
+        <div className={classes.Contents + " flex"}>
             <div className={classes.Content}>default profile</div>
             <div className={classes.Content}>profile 2</div>
             <div className={classes.Content}>profile 3</div>
