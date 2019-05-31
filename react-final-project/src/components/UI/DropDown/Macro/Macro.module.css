@@ -12,7 +12,7 @@
     max-width: calc(100% - 24px);
 }
 
-.DropDown .icon.expand {
+.DropDown .expand {
     position: absolute;
     top: 0px;
     right: 0px;

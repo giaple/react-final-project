@@ -1,58 +1,76 @@
 import React from 'react';
 
 import classes from './LeftSide.module.css';
+import { useContextValue } from '../../../Contexts/MacroContext';
+
+const items = [
+    {
+        type: classes.delay,
+        name: 'delay'
+    },
+    {
+        type: classes.keyboard,
+        name: 'keyboard'
+    },
+    {
+        type: classes.mouse,
+        name: 'mouse'
+    },
+    {
+        type: classes.macro,
+        name: 'macro'
+    },
+    {
+        type: classes.switch,
+        name: 'switch'
+    },
+    {
+        type: classes.switch_light,
+        name: 'switch light'
+    },
+    {
+        type: classes.launch,
+        name: 'launch'
+    },
+    {
+        type: classes.console,
+        name: 'console'
+    },
+    {
+        type: classes.multimedia,
+        name: 'multimedia'
+    },
+    {
+        type: classes['text_function'],
+        name: 'text function'
+    },
+    {
+        type: classes.loop,
+        name: 'loop'
+    }
+]
 
 const LeftSide = (props) => {
+
+    const [,dispatch] = useContextValue();
+
     return (
         <div className={classes.LeftSide}>
-            <div className={classes.item + " flex"}>
+            <div className={"flex"}>
                 ADD
             </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes.delay].join(' ')}></div>
-                delay
+            {items.map(item => {
+                return (
+                    <div key={item.name}
+                        className={classes.item + " flex"}
+                        onClick={() => dispatch({type: 'addItem',item: {type: item.type,name: item.name}})}
+                        >
+                        <div className={[classes.icon, item.type].join(' ')}></div>
+                        {item.name}
 
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes.keyboard].join(' ')}></div>
-                keyboard function
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes.mouse].join(' ')}></div>
-                mouse function
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes.macro].join(' ')}></div>
-                macro
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes.switch].join(' ')}></div>
-                switch device profile
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes['switch_light']].join(' ')}></div>
-                switch lighting
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes.launch].join(' ')}></div>
-                launch
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes.console].join(' ')}></div>
-                run command
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes.multimedia].join(' ')}></div>
-                multimedia
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes['text_function']].join(' ')}></div>
-                text function
-            </div>
-            <div className={classes.item + " flex"}>
-                <div className={[classes.icon, classes.loop].join(' ')}></div>
-                loop
-            </div>
+                    </div>
+                )
+            })}
         </div>
     );
 }

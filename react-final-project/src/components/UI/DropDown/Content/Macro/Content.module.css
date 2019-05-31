@@ -1,0 +1,43 @@
+.Contents {
+	z-index: 100;
+	position: absolute;
+	left: 0;
+	max-width: 100%;
+	flex-direction: column;
+	border: 1px solid #515151;
+	border-bottom: none;
+	border: none;
+	/*border-top: none;*/
+	background-color: #000;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-top: 1px;
+	height: 0;
+    width: 100%;
+    top: 27px;
+
+	will-change: height, max-height, border-bottom;
+	transition: height .2s, max-height .2s, border-bottom .1s;
+}
+.Contents.expand {
+	height: auto;
+	border: 1px solid #515151;
+	max-height: 180px;
+}
+.Contents .Content {
+	width: 100%;
+	height: 25px;
+    text-transform: capitalize;
+    padding: 4px 5px;
+	font-size: 14px;
+	/*position: relative;*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: 100%;
+	min-height: 25px;
+}
+.Contetns .Content:hover {
+	cursor: pointer;
+	background-color: rgba(255,255,255,0.1);
+}
